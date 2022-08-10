@@ -1,0 +1,25 @@
+Movie spiderman = new Movie("Spiderman", "sum", "PG");
+Console.WriteLine(spiderman.gsrating);
+class Movie
+{
+    private string Name;
+    private string Director;
+    private string Rating;
+    public Movie(string name, string director, string rating)
+    {
+        Name = name;
+        Director = director;
+        gsrating = rating;
+    }
+    //property
+    public string gsrating
+    {
+        get { return Rating; }
+        set { if (value != "PG") {
+                Rating = "NR";
+            } else {
+                Rating = value;
+               }
+        }
+    }
+}
